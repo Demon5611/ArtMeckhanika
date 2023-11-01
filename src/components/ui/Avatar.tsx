@@ -8,7 +8,7 @@ type AvatarProps = {
 
 const Avatar: React.FC<AvatarProps> = ({ src, name, title }) => {
   return (
-    <div className="avatar" style={{ marginTop: '-90ch'}}>
+    <div className="avatar" style={{ marginTop: '-85ch'}}>
       <img src={src} alt="Avatar" className="avatarImage" />
       <div className="textContainerAvatar">
         <div className="name">{name}</div>

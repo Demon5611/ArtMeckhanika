@@ -1,7 +1,7 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgb(239, 238, 229);
+  background-color: rgb(242, 242, 242);
   /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@
 
 /* ================MainPage.jsx =======*/
 .main-container {
-  background-color: rgb(239, 238, 229);
+  background-color: rgb(242, 242, 242);
 }
 
 .firstText {
@@ -127,12 +127,6 @@
 }
 
 /* ==========CONTACTS======= */
-/* .cardContainer {
-  width: 20ch;
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Можно настроить интервал между карточками по вашему выбору */
-} */
 
 .cardContacts {
   width: 340px;
@@ -141,28 +135,33 @@
   text-decoration-color: rgb(47, 46, 46);
 }
 .Btn {
-  width: 230px;
-  height: 45px;
-  margin-top: 0.3ch;
+  width: 20ch;
+  height: 4.1ch;
+  margin-top: 0.3ch;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Добавлено позиционирование */
+ 
 }
+
 
 .span {
   font-size: 1.4ch;
-  margin-left: 0.5ch;
+  margin-left: 1ch;
 }
 
-/* .btn-container {
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-} */
+.span:hover{
+  font-weight: bolder;
+  size: 20ch;
+}
+
 
 .avatarImage {
   margin-top: 5%;
   margin-bottom: 5ch;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -266,55 +265,29 @@
   }
   .avatar {
     position: relative;
-    /* top: 50%; */
     right: 25%;
     transform: translate(25%, 30%);
-    /* display: flex; */
-    /* flex-direction: column;    */
-    /* text-align: center; */
-    /* flex-direction: column; */
-    justify-content: center;
-    /* flex-wrap: wrap; */
-  }
-  .iphone-container {
-    /* position: relative; */
+ 
   }
 
   .avatarContainer {
     margin-top: 8ch;
   }
 
-  .main-container {
-  }
-  /* редактирование самой формочки айфона */
-  .imgPhone {
-    /* position: relative; */
-  }
 
   .span {
     font-size: 2ch;
     margin-left: 0.5ch;
+    
   }
 
   .Btn {
-    border-radius: 2ch;
-    margin-bottom: 1ch;
+    margin-bottom: 0.1ch;
     width: 40ch;
     height: 8ch;
-    margin-top: 0.1ch;
     background-color: #f3e51f;
-    transform: translate(1%, 150%);
+    transform: translate(1%, 190%);
   }
-
-  /* .button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;   
-    text-align: center;
-  } */
 
   .avatarImage {
     margin-top: 10%;
@@ -324,6 +297,6 @@
   }
 
   .title {
-    margin-bottom: -30ch;
+    margin-bottom: -35ch;
   }
 }
