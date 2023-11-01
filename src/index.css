@@ -1,69 +1,329 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
+  background-color: rgb(239, 238, 229);
+  /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-size: 20px;
+}
+/* *, ::after, ::before {
+} */
+
+#root {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+/* ============.nuvBar=========== */
+.nuvBar {
+  /* padding-bottom: 2ch; */
+}
+.nuvBar {
+  background-color: transparent;
+  transition: background-color 1s; /* Плавный переход цвета фона */
+  position: relative;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.nuvBar.fixed {
+  background-color: rgb(242, 235, 136); /* Цвет фона при фиксации */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Чтобы меню оставалось поверх других элементов */
 }
 
-body {
-  margin: 0;
+/* ================MainPage.jsx =======*/
+.main-container {
+  background-color: rgb(239, 238, 229);
+}
+
+.firstText {
+  margin-left: 2ch;
+}
+.container {
+  display: contents;
+}
+
+.containerText {
+  line-height: 1.2;
+  font-size: larger;
+  text-align: justify;
+  text-indent: 4ch;
+  margin-top: 3ch;
+  margin-left: 10ch;
+  margin-right: 10ch;
+}
+.text-end {
+  text-indent: 4ch;
+  margin-top: 3ch;
+}
+
+.textMainImg3 {
+  margin-top: 2ch;
+  text-indent: 4ch;
+  text-align: justify;
+}
+.me-auto {
+  margin-left: 4ch;
+}
+.ms-4 {
+  margin-right: 4ch;
+}
+.img2 {
+  height: 20ch;
+  float: left;
+  padding-left: 1ch;
+  padding-right: 2ch;
+  margin-top: 1ch;
+}
+.img3 {
+  margin-top: 5ch;
+  height: 30ch;
+  float: right;
+  padding: 2ch;
+}
+
+
+/* ===========/* galary   */
+.containerTextGalaryTop {
+  font-size: larger;
+  text-align: justify;
+  text-indent: 2ch; /* отступ*/
+  margin-top: 2%;
+  margin-right: 10ch;
+  margin-left: 10ch;
+  line-height: 1.2;
+  margin-top: 6ch;
+}
+
+.containerTextGalaryRightALL {
+  text-align: justify;
+  text-indent: 4ch;
+  width: 50%;
+  float: right;
+}
+
+
+.textRight1 {
+  text-indent: 4ch;
+  width: 100%;
+  margin-right: 4ch;
+}
+
+.material{
+  font-size: smaller;
+  font-style: italic;
+  text-indent: 0ch; 
+
+
+}
+
+.image-container {
+  margin-top: 4ch;
+  
+}
+
+/* ==========CONTACTS======= */
+/* .cardContainer {
+  width: 20ch;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  gap: 20px; /* Можно настроить интервал между карточками по вашему выбору */
+} */
+
+.cardContacts {
+  width: 340px;
+  border-radius: 3ch;
+  margin-top: 0.5ch;
+  text-decoration-color: rgb(47, 46, 46);
+}
+.Btn {
+  width: 230px;
+  height: 45px;
+  margin-top: 0.3ch;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.span {
+  font-size: 1.4ch;
+  margin-left: 0.5ch;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* .btn-container {
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+} */
+
+.avatarImage {
+  margin-top: 5%;
+  margin-bottom: 5ch;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.avatarContainer {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  margin-top: 60px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.title {
+  color: gray;
+  margin-bottom: -15%;
+}
+
+/* ===========MODAL=========== */
+/* ============SCROLL======== */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  z-index: 999;
+  font-size: 24px;
+  transition: background-color 0.3s transform 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
+.scroll-to-top:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+/* ============CONTACTS=MEDIA==== */
+
+@media (max-width: 1200px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    font-size: 10px;
   }
-  a:hover {
-    color: #747bff;
+
+  .nuvBar {
+    justify-content: space-evenly;
   }
-  button {
-    background-color: #f9f9f9;
+  .avatar {
+    position: relative;
+    right: 25%;
+    transform: translate(25%, 5%);
+    justify-content: center;
+  }
+
+  .avatarContainer {
+    margin-top: 8ch;
+  }
+
+  .span {
+    font-size: 2ch;
+    margin-left: 0.5ch;
+  }
+
+  .Btn {
+    border-radius: 2ch;
+    margin-bottom: 1ch;
+    width: 40ch;
+    height: 8ch;
+    margin-top: 0.1ch;
+    background-color: #f3e51f;
+    transform: translate(1%, 150%);
+  }
+
+  .avatarImage {
+    margin-top: 10%;
+    margin-bottom: 1ch;
+    width: 90px;
+    height: 90px;
+  }
+
+  .title {
+    margin-bottom: -30ch;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .nuvBar {
+    justify-content: space-evenly;
+  }
+  .avatar {
+    position: relative;
+    /* top: 50%; */
+    right: 25%;
+    transform: translate(25%, 30%);
+    /* display: flex; */
+    /* flex-direction: column;    */
+    /* text-align: center; */
+    /* flex-direction: column; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+  }
+  .iphone-container {
+    /* position: relative; */
+  }
+
+  .avatarContainer {
+    margin-top: 8ch;
+  }
+
+  .main-container {
+  }
+  /* редактирование самой формочки айфона */
+  .imgPhone {
+    /* position: relative; */
+  }
+
+  .span {
+    font-size: 2ch;
+    margin-left: 0.5ch;
+  }
+
+  .Btn {
+    border-radius: 2ch;
+    margin-bottom: 1ch;
+    width: 40ch;
+    height: 8ch;
+    margin-top: 0.1ch;
+    background-color: #f3e51f;
+    transform: translate(1%, 150%);
+  }
+
+  /* .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;   
+    text-align: center;
+  } */
+
+  .avatarImage {
+    margin-top: 10%;
+    margin-bottom: 1ch;
+    width: 90px;
+    height: 90px;
+  }
+
+  .title {
+    margin-bottom: -30ch;
   }
 }
