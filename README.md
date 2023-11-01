@@ -1,4 +1,4 @@
-# Elbrus Bootcamp Vite bundle
+
 
 ## React + Typescript + ESLint + Prettier
 
@@ -73,3 +73,4 @@ npm run preview
 ```
 
 Если директория не `client` или `server`, то можно добавить соответствующую строчку в данный массив.
+# ArtMeckhanika
