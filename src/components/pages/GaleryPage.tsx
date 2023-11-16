@@ -47,18 +47,20 @@ export default function GaleryPage(): JSX.Element {
 
   return (
     <>
-      <div className="containerTextGalaryTop" >
-        <h3 className='h3_textTop'>Кто мы такие и куда направляемся?</h3>
+      <div className="containerTextGalaryTop">
+        <h3 className="h3_textTop">Кто мы такие и куда направляемся?</h3>
         <br />
         <p style={{ textIndent: '2ch' }}>
-        Этот вопрос не раз ставил меня в тупик, потому что я родитель, и в то же время, обладаю
-        любопытством ребенка, выросшего в семье ученых. Скажем по-другому. Для меня это второй
-        вопрос после "Есть ли Господь?". Я думаю, что ответ уже ясен из заглавной буквы слова
-        "Господь". Но как насчет остального?
+          Этот вопрос не раз ставил меня в тупик, потому что я родитель, и в то же время, обладаю
+          любопытством ребенка, выросшего в семье ученых. Скажем по-другому. Для меня это второй
+          вопрос после "Есть ли Господь?". Я думаю, что ответ уже ясен из заглавной буквы слова
+          "Господь". Но как насчет остального?
         </p>
-        <div className="containerTextGalaryRightALL" >
+        <div className="containerTextGalaryRightALL">
           <div className="textRight1">
-            <h3 className='h1_1' style={{ marginTop: '1ch' }}>ПРОЦЕСС ЭВОЛЮЦИИ</h3>
+            <h3 className="h1_1" style={{ marginTop: '1ch' }}>
+              ПРОЦЕСС ЭВОЛЮЦИИ
+            </h3>
             <p style={{ textIndent: '2ch' }}>
               Это яркий вызов современной реальности Нет ничего хуже интеллектуальных шор навязанных
               нам….Кем навязанных? Социальными предрассудками, бизнесом и личными интересами
@@ -69,14 +71,14 @@ export default function GaleryPage(): JSX.Element {
           </div>
 
           <div className="textRight2">
-            <h3 className='h2_2'>КОРОЛЕВ</h3>
+            <h3 className="h2_2">КОРОЛЕВ</h3>
             <p style={{ textIndent: '2ch' }}>Размышление на тему живопись и любимый город</p>
             {/* <br /> */}
             <p className="material">Материал: масло, пастель; графика. Размеры работ 30/40см</p>
           </div>
 
           <div className="textRight3">
-            <h3 className='h3_3' >МИГРАЦИОННЫЙ ЗАХВАТ</h3>
+            <h3 className="h3_3">МИГРАЦИОННЫЙ ЗАХВАТ</h3>
             <p style={{ textIndent: '2ch' }}>
               Эта проблема больше чем вам всем кажется… Слишком много людей мигрируют по странам и
               континентам – вы все еще сомневаетесь? Посмотрите статистику. Смешение культур, расс,
@@ -96,24 +98,18 @@ export default function GaleryPage(): JSX.Element {
           </div>
         </div>
 
-
-        <div  className="image-container">
+        <div className="image-container">
           {imagesData.map((image, index) => (
-            <Card 
-              key={image.id || index}
-              onClick={() => openModal(image.src)}
-              >
-              <Card.Img  src={image.src} />
+            <Card key={image.id || index} onClick={() => openModal(image.src)}>
+              <Card.Img src={image.src} />
             </Card>
           ))}
         </div>
-
-            
       </div>
 
       <Modal show={showModal} onHide={closeModal} size="lg" centered>
         <Modal.Body>
-          <img src={selectedImage} alt="Selected" style={{ width: '100%' }} />
+          <img src={selectedImage || ''} alt="Selected" style={{ width: '100%' }} />
         </Modal.Body>
       </Modal>
     </>
