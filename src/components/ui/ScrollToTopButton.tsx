@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
-export default function ScrollToTopButton(): JSX.Element {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+export default function ScrollToTopButton(): JSX.Element | null {
+  const [isVisible, setIsVisible] = useState<boolean | Element>(false);
 
   const scrollToTop = (): void => {
     window.scrollTo({
@@ -26,11 +26,13 @@ export default function ScrollToTopButton(): JSX.Element {
     };
   }, []);
 
+  if (!isVisible) {
+    return null; // or any other appropriate element, or an empty fragment <>
+  }
+
   return (
-    isVisible && (
-      <div className="scroll-to-top" onClick={scrollToTop}>
-        <FaArrowUp />
-      </div>
-    )
+    <div className="scroll-to-top" onClick={scrollToTop}>
+      <FaArrowUp />
+    </div>
   );
 }
