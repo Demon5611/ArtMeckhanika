@@ -1,20 +1,14 @@
 import React from 'react';
 import { Button, Container } from 'react-bootstrap';
-import ImageAvatar from '../ui/ImageAvatar';
 import { FaEnvelope, FaVk, FaTelegramPlane } from 'react-icons/fa';
+import ImageAvatar from '../ui/ImageAvatar';
 import iphoneForm from '../../assets/img/iphonForm.png';
 
 export default function ContactsPage(): JSX.Element {
   const styleBtn = {
     borderColor: 'grey',
     borderRadius: '2ch',
-    backgroundColor: 'rgb(243, 229, 31)',
-    background: 'linear-gradient(to bottom, #ffc107, #f3e51f)',
-    transition: 'background-color 0.3s',
-  };
-
-  const hoverStyle = {
-    background: 'linear-gradient(to bottom, #f3e51f, #f3d431)', // Цвет при наведении
+    background: 'radial-gradient(circle,  #f3e51f, #ffc107,)',
   };
 
   return (
@@ -30,7 +24,7 @@ export default function ContactsPage(): JSX.Element {
           >
             <Button
               className="Btn"
-              style={{ ...styleBtn, ...hoverStyle }}
+              style={styleBtn}
               href="https://t.me/nataavodes"
               variant="warning"
             >
@@ -51,7 +45,7 @@ export default function ContactsPage(): JSX.Element {
             <Button
               className="Btn"
               style={styleBtn}
-              href="https://t.me/nataavodes"
+              href="mailto:nataliya.mur@mail.ru"
               variant="warning"
             >
               <FaEnvelope />
