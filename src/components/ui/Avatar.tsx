@@ -6,9 +6,9 @@ type AvatarProps = {
   title: string;
 };
 
-const Avatar: React.FC<AvatarProps> = ({ src, name, title }) => {
+export default function Avatar({ src, name, title }: AvatarProps): JSX.Element {
   return (
-    <div className="avatar" style={{ marginTop: '-85ch'}}>
+    <div className="avatar" style={{ marginTop: '-85ch' }}>
       <img src={src} alt="Avatar" className="avatarImage" />
       <div className="textContainerAvatar">
         <div className="name">{name}</div>
@@ -16,6 +16,4 @@ const Avatar: React.FC<AvatarProps> = ({ src, name, title }) => {
       </div>
     </div>
   );
-};
-
-export default Avatar;
+}
