@@ -1,25 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
   background-color: rgb(242, 242, 242);
-  /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   font-size: 20px;
 }
-/* *, ::after, ::before {
-} */
 
 #root {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 /* ============.nuvBar=========== */
-.nuvBar {
-  /* padding-bottom: 2ch; */
-}
+
 .nuvBar {
   background-color: transparent;
   transition: background-color 1s; /* Плавный переход цвета фона */
@@ -34,11 +35,11 @@
   width: 100%;
   z-index: 1000; /* Чтобы меню оставалось поверх других элементов */
 }
-
-/* ================MainPage.jsx =======*/
 .main-container {
   background-color: rgb(242, 242, 242);
 }
+
+/* ================MainPage.jsx =======*/
 
 .firstText {
   margin-left: 2ch;
@@ -66,6 +67,11 @@
   text-indent: 4ch;
   text-align: justify;
 }
+.h3_MainText3 {
+  margin-top: 10ch;
+}
+
+/* logo */
 .me-auto {
   margin-left: 4ch;
 }
@@ -78,14 +84,23 @@
   padding-left: 1ch;
   padding-right: 2ch;
   margin-top: 1ch;
+  transition: transform 0.3s ease;
 }
+.img2:hover {
+  transform: scale(1.5);
+}
+
 .img3 {
   margin-top: 5ch;
   height: 30ch;
   float: right;
   padding: 2ch;
+  transition: transform 0.2s ease;
 }
 
+.img3:hover {
+  transform: scale(1.5);
+}
 
 /* ===========/* galary   */
 .containerTextGalaryTop {
@@ -100,30 +115,35 @@
 }
 
 .containerTextGalaryRightALL {
-  text-align: justify;
-  text-indent: 4ch;
-  width: 50%;
+  flex: 1; /* Чтобы текст сжимался и увеличивался вместе с карточками */
+  max-width: 50%; /* Максимальная ширина текста */
+  padding: 1rem; /* Внутренний отступ текста */
   float: right;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
-
-.textRight1 {
-  text-indent: 4ch;
-  width: 100%;
-  margin-right: 4ch;
+.h2_2 {
+  margin-top: 10ch;
 }
 
-.material{
+.h3_3 {
+  margin-top: 20ch;
+  text-indent: 2ch;
+}
+.material {
   font-size: smaller;
   font-style: italic;
-  text-indent: 0ch; 
-
-
+  text-indent: 0ch;
 }
 
 .image-container {
-  margin-top: 4ch;
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem; /* Расстояние между карточками */
+  margin-top: 2ch;
 }
 
 /* ==========CONTACTS======= */
@@ -137,25 +157,23 @@
 .Btn {
   width: 20ch;
   height: 4.1ch;
-  margin-top: 0.3ch;  
+  margin-top: 0.3ch;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative; /* Добавлено позиционирование */
- 
 }
-
 
 .span {
   font-size: 1.4ch;
   margin-left: 1ch;
+  vertical-align: middle;
 }
 
-.span:hover{
+.span:hover {
   font-weight: bolder;
   size: 20ch;
 }
-
 
 .avatarImage {
   margin-top: 5%;
@@ -181,7 +199,6 @@
   margin-bottom: -15%;
 }
 
-/* ===========MODAL=========== */
 /* ============SCROLL======== */
 
 .scroll-to-top {
@@ -206,79 +223,216 @@
   background-color: #555;
   transform: scale(1.1);
 }
+/* =============FOOTER=========== */
+.next {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 20ch;
+}
 
-/* ============CONTACTS=MEDIA==== */
+/* =====@media (min-width: 768px) and (max-width: 1224px)======= */
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1285px) {
   :root {
     font-size: 10px;
   }
-
-  .nuvBar {
-    justify-content: space-evenly;
+  .main-container {
+    height: 70pc;
   }
+
+  .img2 {
+    height: 30ch;
+  }
+  .img3 {
+    margin-top: 5ch;
+    height: 40ch;
+    float: right;
+    padding: 2ch;
+  }
+  .h3_MainText3 {
+    margin-top: 15ch;
+  }
+  /* ==========Galary=========== */
+
+  .containerTextGalaryTop {
+    font-size: medium;
+    text-align: justify;
+    margin-top: 2%;
+    margin-right: 5ch;
+    margin-left: 5ch;
+    line-height: 1.2;
+    margin-top: 4ch;
+  }
+
+  .containerTextGalaryRightALL {
+    flex: 1 1 auto;
+    padding: 1rem;
+    padding-right: 4ch;
+    max-width: 62%; /* Максимальная ширина текста */
+    padding: 1rem; /* Внутренний отступ текста */
+    font-size: small;
+    text-align: justify;
+  }
+
+  .h2_2 {
+    margin-top: 4ch;
+  }
+  .h3_3 {
+    margin-top: 5ch;
+  }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem; /* Расстояние между карточками */
+    margin-top: 3ch;
+    width: 21ch;
+    margin-left: 2ch;
+  }
+
+  /* ============CONTACTS======= */
+
   .avatar {
     position: relative;
     right: 25%;
-    transform: translate(25%, 5%);
+    transform: translate(25%, -2%);
     justify-content: center;
   }
-
   .avatarContainer {
-    margin-top: 8ch;
+    margin-top: 5ch;
   }
 
   .span {
-    font-size: 2ch;
-    margin-left: 0.5ch;
+    font-size: 3ch;
+    margin-left: 1ch;
+    vertical-align: middle;
   }
 
   .Btn {
-    border-radius: 2ch;
-    margin-bottom: 1ch;
     width: 40ch;
     height: 8ch;
-    margin-top: 0.1ch;
-    background-color: #f3e51f;
-    transform: translate(1%, 150%);
+    transform: translate(1%, -250%);
   }
 
   .avatarImage {
-    margin-top: 10%;
     margin-bottom: 1ch;
+    margin-top: 10%;
     width: 90px;
     height: 90px;
   }
 
   .title {
-    margin-bottom: -30ch;
+    margin-bottom: -20ch;
   }
 }
 
-@media (max-width: 640px) {
+/* ====Footer=== */
+.text {
+  bottom: 0;
+  width: 100%;
+  /* position: absolute; */
+}
+
+/* ========@media (max-width: 767px)========= */
+
+@media (max-width: 767px) {
   :root {
     font-size: 10px;
   }
 
-  .nuvBar {
-    justify-content: space-evenly;
+  /* ====mainPage== */
+  .main-container {
+    height: 59pc;
   }
+
+  /* Logo */
+  .me-9 {
+    width: 20ch;
+    height: 3ch;
+  }
+  .containerText {
+    line-height: 1.2;
+    font-size: larger;
+    text-align: justify;
+    text-indent: 2ch;
+    margin-top: 3ch;
+    margin-left: 2ch;
+    margin-right: 2ch;
+  }
+
+  .h3_MainText3 {
+    margin-top: 5ch;
+  }
+  /* ====GalaryPage=== */
+
+  .containerTextGalaryTop {
+    font-size: small;
+    text-align: justify;
+    margin-top: 2%;
+    margin-right: 1ch;
+    margin-left: 1ch;
+    line-height: 1.2;
+    margin-top: 4ch;
+  }
+
+  .containerTextGalaryRightALL {
+    flex: 1 1 auto;
+    padding: 1rem;
+    padding-right: 2ch;
+    max-width: 64%;
+    padding: 1rem; /* Внутренний отступ текста */
+    font-size: smaller;
+    text-align: justify;
+  }
+
+  .h1_1 {
+    font-size: 1.5ch;
+  }
+  .h2_2 {
+    font-size: 1.5ch;
+    margin-top: 4ch;
+  }
+  .h3_3 {
+    font-size: 1.5ch;
+    margin-top: 6ch;
+  }
+
+  .material {
+    margin-top: 0ch;
+  }
+  .image-container {
+    margin-top: 5ch;
+    gap: 7rem; /* Расстояние между карточками */
+    width: 14ch;
+    transform: translate(2%, 5%);
+  }
+
+  /* ===========ContactsPage== */
   .avatar {
     position: relative;
     right: 25%;
-    transform: translate(25%, 30%);
- 
+    transform: translate(25%, -4%);
   }
 
+  .avatarImage {
+    margin-top: 20%;
+    margin-bottom: 3ch;
+    width: 90px;
+    height: 90px;
+  }
+
+  .title {
+    margin-bottom: -45ch;
+  }
   .avatarContainer {
     margin-top: 8ch;
   }
 
-
   .span {
     font-size: 2ch;
     margin-left: 0.5ch;
-    
+    vertical-align: middle;
   }
 
   .Btn {
@@ -286,17 +440,83 @@
     width: 40ch;
     height: 8ch;
     background-color: #f3e51f;
-    transform: translate(1%, 190%);
+    transform: translate(1%, 220%);
+  }
+}
+/* =============FOOTER=========== */
+.next {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 40ch;
+}
+/* =====@media (max-width: 372px)======= */
+
+@media (max-width: 372px) {
+  :root {
+    font-size: 10px;
   }
 
+  /* logo me-9 */
+  .me-9 {
+    width: 15ch;
+    height: 2ch;
+    margin-left: 1ch;
+  }
+
+  /* ====GalaryPage=== */
+
+  .h3_textTop {
+    font-size: small;
+  }
+  .containerTextGalaryRightALL {
+    flex: 1 1 auto;
+    padding: 1rem;
+    padding-right: 2ch;
+    max-width: 60%;
+    padding: 1rem; /* Внутренний отступ текста */
+    font-size: smaller;
+    text-align: justify;
+  }
+
+  .h1_1 {
+    font-size: 1.2ch;
+  }
+  .h2_2 {
+    font-size: 1.2ch;
+  }
+  .h3_3 {
+    font-size: 1.2ch;
+    margin-top: 6ch;
+  }
+
+  .image-container {
+    margin-top: 11ch;
+    gap: 15rem; /* Расстояние между карточками */
+    width: 11ch;
+  }
+
+  /* ====ContactPage=== */
+  .avatarContainer {
+    margin-top: 6ch;
+  }
+  .avatar {
+    transform: translate(30%, 15%);
+  }
   .avatarImage {
     margin-top: 10%;
     margin-bottom: 1ch;
-    width: 90px;
-    height: 90px;
   }
 
   .title {
-    margin-bottom: -35ch;
+    margin-bottom: -25ch;
+  }
+
+  .span {
+    font-size: 3ch;
+    margin-left: 0.5ch;
+    vertical-align: middle;
+  }
+
+  .Btn {
+    transform: translate(5%, 120%);
   }
 }
