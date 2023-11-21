@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -25,21 +26,20 @@ export default function NavBar(): JSX.Element {
     }
   }, []);
 
-
   return (
     <Container>
       <Navbar className="nuvBar" variant="light">
         <img src={logoNata} width="30%" height="30%" className="me-auto me-9" alt="logo" />
         <Nav className="ms-4">
-          <Nav.Link href="#main">
+          <ScrollLink to="main" smooth={true} duration={900} style={{ marginRight: '1ch' }}>
             Главная
-          </Nav.Link>
-          <Nav.Link href="#gallery">
+          </ScrollLink>
+          <ScrollLink to="gallery" smooth={true} duration={900} style={{ marginRight: '1ch' }}>
             Галерея
-          </Nav.Link>
-          <Nav.Link href="#contacts">
+          </ScrollLink>
+          <ScrollLink to="contacts" smooth={true} duration={900}>
             Контакты
-          </Nav.Link>
+          </ScrollLink>
         </Nav>
       </Navbar>
     </Container>
