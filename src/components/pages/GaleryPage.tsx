@@ -46,7 +46,7 @@ export default function GaleryPage(): JSX.Element {
   };
 
   return (
-    <>
+    <div id='gallery'>
       <div className="containerTextGalaryTop">
         <h3 className="h3_textTop">Кто мы такие и куда направляемся?</h3>
         <br />
@@ -83,19 +83,13 @@ export default function GaleryPage(): JSX.Element {
               Эта проблема больше чем вам всем кажется… Слишком много людей мигрируют по странам и
               континентам – вы все еще сомневаетесь? Посмотрите статистику. Смешение культур, расс,
               ценностей… Давайте порассуждаем вместе..
-            </p>
+              </p>
             <p className="material">
               Материал: цифровая графика, коллаж, печать на пенокартоне. Размеры работ 80/120см
+          
             </p>
-            <a
-              href={NataAvodesCV}
-              style={{ float: 'right', fontSize: '1ch' }}
-              className="cv"
-              download="NataAvodesCV.pdf"
-            >
-              Скачать CV NataAvodes
-            </a>
           </div>
+
         </div>
 
         <div className="image-container">
@@ -104,7 +98,16 @@ export default function GaleryPage(): JSX.Element {
               <Card.Img src={image.src} />
             </Card>
           ))}
+                    <a
+              href={NataAvodesCV}
+              style={{ float:'right', fontSize: '1ch' }}
+              className="cv"
+              download="NataAvodesCV.pdf"
+            >
+              Скачать CV NataAvodes
+            </a>
         </div>
+        
       </div>
 
       <Modal show={showModal} onHide={closeModal} size="lg" centered>
@@ -112,6 +115,6 @@ export default function GaleryPage(): JSX.Element {
           <img src={selectedImage || ''} alt="Selected" style={{ width: '100%' }} />
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
