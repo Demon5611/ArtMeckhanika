@@ -12,7 +12,7 @@ export default function ContactsPage(): JSX.Element {
   };
 
   return (
-    <div className="iphone-container">
+    <div className="iphone-container" id="contacts">
       <div className="avatarContainer">
         <div className="iphone-image">
           <img src={iphoneForm} alt="imgPhone" className="imgPhone" style={{ height: '90ch' }} />
