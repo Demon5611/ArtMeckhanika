@@ -26,6 +26,19 @@
   transition: background-color 1s; /* Плавный переход цвета фона */
   position: relative;
 }
+.scroll-link {
+  cursor: pointer;
+  color: #212529;
+  text-decoration: none;
+}
+.scroll-link:hover {
+  font-weight: bold; /* Сделать текст жирным при наведении */
+  color: rgb(55, 55, 28); /* Изменить цвет текста на желтый при наведении */
+}
+
+.scroll-link:visited {
+  color: yellow; /* Цвет текста для посещенных ссылок */
+}
 
 .nuvBar.fixed {
   background-color: rgb(242, 235, 136); /* Цвет фона при фиксации */
@@ -163,7 +176,10 @@
   justify-content: center;
   position: relative; /* Добавлено позиционирование */
 }
-
+.pictButn {
+  height: 1.2ch;
+  vertical-align: super; /* расположение по середине кнопки */
+}
 .span {
   font-size: 1.4ch;
   margin-left: 1ch;
