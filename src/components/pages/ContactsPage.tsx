@@ -18,7 +18,7 @@ export default function ContactsPage(): JSX.Element {
           <img src={iphoneForm} alt="imgPhone" className="imgPhone" style={{ height: '90ch' }} />
 
           <ImageAvatar />
-          <Container
+          <Container id='containerBtn'
             className="d-flex flex-column justify-content-center flex-wrap align-items-center"
             style={{ height: '50vh', marginTop: '22ch', gap: '1ch' }}
           >
@@ -28,7 +28,7 @@ export default function ContactsPage(): JSX.Element {
               href="https://t.me/nataavodes"
               variant="warning"
             >
-              <FaTelegramPlane />
+              <FaTelegramPlane className='pictButn'/>
               <span className="span">Telegram</span>
             </Button>
 
@@ -38,7 +38,7 @@ export default function ContactsPage(): JSX.Element {
               href="https://vk.com/artmehanikastudio"
               variant="warning"
             >
-              <FaVk />
+              <FaVk className='pictButn'/>
               <span className="span">VK</span>
             </Button>
 
@@ -47,8 +47,9 @@ export default function ContactsPage(): JSX.Element {
               style={styleBtn}
               href="mailto:nataliya.mur@mail.ru"
               variant="warning"
+              target="_blank"
             >
-              <FaEnvelope />
+              <FaEnvelope className='pictButn'/>
               <span className="span">E-mail</span>
             </Button>
           </Container>
