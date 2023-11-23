@@ -115,16 +115,21 @@
   transform: scale(1.5);
 }
 
-/* ===========/* galary   */
+/* ===========/* gallary   */
+#gallery {
+  background-color: rgb(156, 153, 153);
+  margin-bottom: 4ch;
+}
 .containerTextGalaryTop {
   font-size: larger;
   text-align: justify;
   text-indent: 2ch; /* отступ*/
-  margin-top: 2%;
+  margin-top: 10ch;
+  padding-top: 9ch;
+  padding-bottom: 9ch;
   margin-right: 10ch;
   margin-left: 10ch;
   line-height: 1.2;
-  margin-top: 6ch;
 }
 
 .containerTextGalaryRightALL {
@@ -158,9 +163,13 @@
   gap: 1rem; /* Расстояние между карточками */
   margin-top: 2ch;
 }
-
+.textRight3 {
+  margin-bottom: 20ch;
+}
 /* ==========CONTACTS======= */
-
+#contacts {
+  padding-top: 10ch;
+}
 .cardContacts {
   width: 340px;
   border-radius: 3ch;
@@ -169,21 +178,21 @@
 }
 .Btn {
   width: 20ch;
-  height: 4.1ch;
-  margin-top: 0.3ch;
+  height: 3.5ch;
+  margin-top: 0.2ch;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative; /* Добавлено позиционирование */
 }
 .pictButn {
-  height: 1.2ch;
+  height: 1ch;
   vertical-align: super; /* расположение по середине кнопки */
 }
 .span {
   font-size: 1.4ch;
   margin-left: 1ch;
-  vertical-align: middle;
+  vertical-align: super;
 }
 
 .span:hover {
@@ -267,6 +276,7 @@
   .h3_MainText3 {
     margin-top: 15ch;
   }
+
   /* ==========Galary=========== */
 
   .containerTextGalaryTop {
@@ -276,7 +286,7 @@
     margin-right: 5ch;
     margin-left: 5ch;
     line-height: 1.2;
-    margin-top: 4ch;
+    margin-top: 14ch;
   }
 
   .containerTextGalaryRightALL {
@@ -328,7 +338,21 @@
   .Btn {
     width: 40ch;
     height: 8ch;
-    transform: translate(1%, -250%);
+    transform: translate(1%, -200%);
+  }
+
+  .pictButn {
+    height: 2ch;
+    vertical-align: super; /* расположение по середине кнопки */
+  }
+  .span {
+    font-size: 3ch;
+    margin-left: 1ch;
+    vertical-align: super;
+  }
+  #containerBtn {
+    padding-bottom: 4ch;
+    padding-top: 23ch;
   }
 
   .avatarImage {
@@ -347,19 +371,18 @@
 .text {
   bottom: 0;
   width: 100%;
-  /* position: absolute; */
 }
 
-/* ========@media (max-width: 767px)========= */
+/* ========@media (max-width: 768px)========= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   :root {
     font-size: 10px;
   }
 
   /* ====mainPage== */
   .main-container {
-    height: 59pc;
+    height: 60pc;
   }
 
   /* Logo */
@@ -445,10 +468,15 @@
     margin-top: 8ch;
   }
 
+  .pictButn {
+    height: 2ch;
+    /* padding-top: 0ch; */
+    vertical-align: super; /* расположение по середине кнопки */
+  }
   .span {
-    font-size: 2ch;
-    margin-left: 0.5ch;
-    vertical-align: middle;
+    font-size: 3ch;
+    margin-left: 1ch;
+    vertical-align: super;
   }
 
   .Btn {
@@ -488,7 +516,7 @@
     padding: 1rem;
     padding-right: 2ch;
     max-width: 60%;
-    padding: 1rem; /* Внутренний отступ текста */
+    padding: 1rem;
     font-size: smaller;
     text-align: justify;
   }
@@ -506,8 +534,8 @@
 
   .image-container {
     margin-top: 11ch;
-    gap: 15rem; /* Расстояние между карточками */
-    width: 11ch;
+    gap: 10rem;
+    width: 12ch;
   }
 
   /* ====ContactPage=== */
@@ -533,6 +561,16 @@
   }
 
   .Btn {
-    transform: translate(5%, 120%);
+    transform: translate(1%, 120%);
+  }
+  .pictButn {
+    height: 2ch;
+    padding-top: 0.3ch;
+    vertical-align: middle; /* расположение по середине кнопки */
+  }
+  .span {
+    font-size: 1.5ch;
+    margin-left: 1ch;
+    vertical-align: middle;
   }
 }
