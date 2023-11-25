@@ -33,6 +33,6 @@ export default function ScrollToTopButton(): JSX.Element | null {
   return (
     <div className="scroll-to-top" onClick={scrollToTop}>
       <FaArrowUp />
-    </div>
+    </div>;
   )
 }
