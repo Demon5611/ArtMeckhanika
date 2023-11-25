@@ -10,7 +10,7 @@
   "forceConsistentCasingInFileNames": true,
 
     /* Bundler mode */
-    "moduleResolution": "none",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
