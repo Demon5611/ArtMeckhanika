@@ -19,6 +19,13 @@ export default function ScrollToTopButton(): JSX.Element | null {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>): void => {
+    if (event.key === 'Enter') {
+      // Handle the key event (in this case, triggering scroll to top)
+      scrollToTop();
+    }
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -27,12 +34,19 @@ export default function ScrollToTopButton(): JSX.Element | null {
   }, []);
 
   if (!isVisible) {
-    return null; 
+    return null;
   }
 
   return (
-    <div className="scroll-to-top" onClick={scrollToTop}>
+    // eslint-disable-next-line jsx-a11y/control-has-associated-label
+    <div
+      className="scroll-to-top"
+      onClick={scrollToTop}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+    >
       <FaArrowUp />
     </div>
-  )
-};
+  );
+}
