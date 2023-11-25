@@ -27,12 +27,12 @@ export default function ScrollToTopButton(): JSX.Element | null {
   }, []);
 
   if (!isVisible) {
-    return null; // or any other appropriate element, or an empty fragment <>
+    return null; 
   }
 
   return (
     <div className="scroll-to-top" onClick={scrollToTop}>
       <FaArrowUp />
     </div>
-  );
+  )
 }
