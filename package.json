@@ -30,8 +30,8 @@
     "toolkit-react": "^1.0.37"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
     "@types/react-modal-image": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
