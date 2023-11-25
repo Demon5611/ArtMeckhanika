@@ -31,13 +31,31 @@ export default function NavBar(): JSX.Element {
       <Navbar className="nuvBar" variant="light">
         <img src={logoNata} width="30%" height="30%" className="me-auto me-9" alt="logo" />
         <Nav className="ms-4">
-          <ScrollLink to="main" smooth={true} duration={900} className="scroll-link" style={{ marginRight: '0.5ch' }}>
+          <ScrollLink
+            to="main"
+            smooth={true}
+            duration={900}
+            className="scroll-link"
+            style={{ marginRight: '0.5ch' }}
+          >
             Главная
           </ScrollLink>
-          <ScrollLink to="gallery" smooth={true} duration={900} className="scroll-link" style={{ marginRight: '0.5ch' }}>
+          <ScrollLink
+            to="gallery"
+            smooth={true}
+            duration={900}
+            className="scroll-link"
+            style={{ marginRight: '0.5ch' }}
+          >
             Галерея
           </ScrollLink>
-          <ScrollLink to="contacts" smooth={true} duration={900} className="scroll-link" style={{ marginRight: '0.5ch' }} >
+          <ScrollLink
+            to="contacts"
+            smooth={true}
+            duration={900}
+            className="scroll-link"
+            style={{ marginRight: '0.5ch' }}
+          >
             Контакты
           </ScrollLink>
         </Nav>
