@@ -10,7 +10,7 @@ import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
 
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById('root')).render(
 <BrowserRouter>
         <div className="main-container">
       <Container>
