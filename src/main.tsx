@@ -7,9 +7,6 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 
-
-
-
 createRoot(document.getElementById('root') as HTMLElement).render(
 <BrowserRouter>
         <div className="main-container">
