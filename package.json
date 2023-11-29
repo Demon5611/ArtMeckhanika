@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
     "@reduxjs/toolkit": "^1.9.7",
+    "@vue/cli-service": "^5.0.8",
     "bootstrap": "^5.3.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -26,10 +27,12 @@
     "react-router-dom": "^6.17.0",
     "react-scroll": "^1.9.0",
     "tailwindcss": "^3.3.5",
-
     "toolkit-react": "^1.0.37"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
     "@types/react-modal-image": "^2.6.2",
