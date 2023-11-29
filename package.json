@@ -26,7 +26,7 @@
     "react-router-dom": "^6.17.0",
     "react-scroll": "^1.9.0",
     "tailwindcss": "^3.3.5",
-    "toolkit": "^1.5.4",
+
     "toolkit-react": "^1.0.37"
   },
   "devDependencies": {
