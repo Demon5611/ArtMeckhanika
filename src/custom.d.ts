@@ -8,6 +8,7 @@ declare module 'react-scroll' {
     className?: string;
     style?: React.CSSProperties;
     children: React.ReactNode; 
+    children: React.createRoot;
   }
 
   export const Link: React.FC<ScrollLinkProps>;
