@@ -27,7 +27,8 @@
     "react-router-dom": "^6.17.0",
     "react-scroll": "^1.9.0",
     "tailwindcss": "^3.3.5",
-    "toolkit-react": "^1.0.37"
+    "toolkit-react": "^1.0.37",
+    "vite": "^5.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
@@ -38,7 +39,7 @@
     "@types/react-modal-image": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.44.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
